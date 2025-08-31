@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Anti-Boredom Society Volunteer Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .bg-brand-purple { background-color: #6366F1; }
+        .text-brand-purple { color: #6366F1; }
+        .border-brand-purple { border-color: #6366F1; }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <!-- Form Container -->
+    <div class="max-w-lg w-full bg-white p-8 rounded-2xl shadow-xl border-t-8 border-brand-purple">
+        
+        <div class="flex flex-col items-center mb-6">
+            <img src="https://assets.website-files.com/6090a9b88301132c1c696e57/6090a9b8830113f380696e83_goat-mascot.png" alt="TABS the Goat" class="h-16 w-16 mb-4">
+            <h1 class="text-3xl font-bold text-gray-800">Join the TABS Crew!</h1>
+            <p class="text-gray-500 mt-2 text-center">Ready to fight boredom and make a difference? Fill out the form below to become a volunteer!</p>
+        </div>
+        
+        <form action=https://formspree.io/f/xnnbvlvy method="POST" class="space-y-6">
+            <!-- Full Name -->
+            <div>
+                <label for="full_name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                <input type="text" name="full_name" id="full_name" required
+                       class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-brand-purple focus:ring-brand-purple focus:ring-1">
+            </div>
+
+            <!-- Email Address -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                <input type="email" name="email" id="email" required
+                       class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-brand-purple focus:ring-brand-purple focus:ring-1">
+            </div>
+
+            <!-- Phone Number -->
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number (Optional)</label>
+                <input type="tel" name="phone" id="phone"
+                       class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-brand-purple focus:ring-brand-purple focus:ring-1">
+            </div>
+
+            <!-- Skills & Interests -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700">
+                    What are your interests or skills?
+                </label>
+                <p class="text-gray-400 text-xs mt-1">Tell us how you'd like to help!</p>
+                <div class="mt-2 space-y-2">
+                    <div class="flex items-center">
+                        <input id="events" name="interests[]" type="checkbox" value="Community Events" class="h-4 w-4 rounded border-gray-300 text-brand-purple focus:ring-brand-purple">
+                        <label for="events" class="ml-3 text-sm text-gray-600">Helping at community events and park meetups</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="crafts" name="interests[]" type="checkbox" value="Crafts & DIY" class="h-4 w-4 rounded border-gray-300 text-brand-purple focus:ring-brand-purple">
+                        <label for="crafts" class="ml-3 text-sm text-gray-600">Leading crafts and DIY projects</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="games" name="interests[]" type="checkbox" value="Games & Activities" class="h-4 w-4 rounded border-gray-300 text-brand-purple focus:ring-brand-purple">
+                        <label for="games" class="ml-3 text-sm text-gray-600">Leading games and physical activities</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="social_media" name="interests[]" type="checkbox" value="Social Media" class="h-4 w-4 rounded border-gray-300 text-brand-purple focus:ring-brand-purple">
+                        <label for="social_media" class="ml-3 text-sm text-gray-600">Social media and photography/videography</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="admin" name="interests[]" type="checkbox" value="Administrative Help" class="h-4 w-4 rounded border-gray-300 text-brand-purple focus:ring-brand-purple">
+                        <label for="admin" class="ml-3 text-sm text-gray-600">Administrative support and planning</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Comments -->
+            <div>
+                <label for="comments" class="block text-sm font-medium text-gray-700">
+                    Additional Comments (Optional)
+                </label>
+                <textarea name="comments" id="comments" rows="2"
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-brand-purple focus:ring-brand-purple focus:ring-1"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit"
+                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-brand-purple hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-purple">
+                    Join the Crew!
+                </button>
+            </div>
+        </form>
+
+    </div>
+    
+</body>
+</html>
